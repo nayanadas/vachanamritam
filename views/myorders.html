@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Cart</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="home">
+								<img src="assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="home">Home</a>
+									
+								</li>
+								
+								<li id="login_header"><a href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" >Login</a></li>
+								<li id="signin_header"><a href="javascript:void(0)" data-toggle="modal" data-target="#signupModal" >Sign Up</a></li>
+								<!-- <li><a href="contact">Contact</a></li> -->
+								<li class="current-list-item d-none" id="profile_header"><a href="#" id="customer_name_header"></a>
+									<ul class="sub-menu">
+										<li><a href="myorders">My Orders</a></li>
+										<li><a href="logout" onclick="sessionStorage.clear();">Logout</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart"><i class="fas fa-shopping-cart"></i></a>
+										<!-- <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a> -->
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p class="subtitle">Vachanamritam</p>
+						<h1>My Orders</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- cart -->
+	<div class="cart-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="cart-table-wrap">
+						<table class="cart-table">
+							<thead class="cart-table-head">
+								<tr class="table-head-row">
+									<th class="">Date</th>
+									<th class="product-image">Product</th>
+									<th class="product-name">Name</th>
+									<th class="product-price">Price</th>
+									<th class="product-quantity">Quantity</th>
+									<th class="product-total">Total price</th>
+								</tr>
+							</thead>
+							<tbody id="orderproductlist">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- end cart -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/book-small/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/book-small/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/book-small/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/book-small/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/book-small/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>India's fastest growing book retailer on the web and currently has a catalogue spread of over 10 million books to browse from.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>Amritapuri, Kollam, Kerala</li>
+							<li>support@Vachanamritam.com</li>
+							<li>+0484 24787888</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="home">Home</a></li>
+							<li><a href="shop">Shop</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Subscribe</h2>
+						<p>Subscribe to our mailing list to get the latest updates.</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2021 - <a href="https://amrita.edu/">Amrita University</a>,  All Rights Reserved.<br>
+						
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+
+
+	<div class="modal" tabindex="-1" role="dialog" id="loginModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="">Login </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="">
+                <form action="/login" method="post">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-user"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Email" id="username" name="username">
+                    </div>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-lock"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="password" placeholder="Password" id="password" name="password">
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <button class="btn btn-primary btn-round" type="submit" style="background-color: #49bbca;" >Login</button>
+                      </div>
+                      <div class="col-6 text-right">
+                        <button class="btn btn-link px-0" type="button">Forgot password?</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="modal-footer" style="display: inline;">
+                
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="signupModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="">Sign Up </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="">
+                <form id="signupform">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-user"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Full name" id="full_name" name="full_name" required="" parsley-error-message="Required field">
+                    </div>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="email" placeholder="Email" id="email" name="email" required parsley-error-message="Enter valid email">
+                    </div>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-address-book"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Address" id="address" name="address" required parsley-error-message="Required field">
+                    </div>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-phone"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Phone number" id="phno" name="phno" required pattern="((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}" parsley-error-message="Enter valid mobile number">
+                    </div>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-lock"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="password" placeholder="Password" id="password" name="password" required parsley-error-message="Required field">
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <button class="btn btn-primary btn-round signup" type="button" style="background-color: #49bbca;" >Sign Up</button>
+                      </div>
+                      
+                    </div>
+                  </form>
+              </div>
+              <div class="modal-footer" style="display: inline;">
+                
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="regcustomermodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="">Registration </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="">
+                <p id="regmessage">You're registered successfully, please login !</p>
+              </div>
+              <div class="modal-footer" style="display: inline;">
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/parsley.min.js"></script>
+
+	<script type="text/javascript">
+		var customer_name='{{name}}';
+		var useremail= '{{email}}';
+	</script>
+	<script src="js/myorders.js"></script>
+</body>
+</html>
